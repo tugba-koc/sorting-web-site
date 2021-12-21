@@ -3,7 +3,7 @@ import ResultItem from "../ResultItem/ResultItem";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
-function LandingList({ filteredList }) {
+function LandingList({ filteredList }) { 
   let navigate = useNavigate();
   const handleClick = () => {
     navigate("/result");
