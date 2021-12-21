@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function SearchBar({ text, changeHandler, isActive, filteredList }) {
+function SearchBar({ text, changeHandler, isActive, filteredList }) { 
   return (
     <div>
       <input
