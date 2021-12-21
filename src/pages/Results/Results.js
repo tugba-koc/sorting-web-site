@@ -31,6 +31,7 @@ function Result({
 
   React.useEffect(() => {
     isActive ? setCurrentPage(1) : setCurrentPage(currentPage);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActive]);
 
   for (let i = 1; i <= Math.ceil(filteredList.length / resultsPerPage); ++i) {
