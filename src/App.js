@@ -7,7 +7,7 @@ import axios from "axios";
 import { listReducer, listInitialState } from "./reducer/listReducer";
 
 function App() {
-  const [list, listDispatch] = React.useReducer(listReducer, listInitialState);
+  const [list, listDispatch] = React.useReducer(listReducer, listInitialState); 
 
   React.useEffect(() => {
     axios.get("Utils/data.json").then((res) => {
