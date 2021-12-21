@@ -9,7 +9,7 @@ function OrderBy({ filteredList, listDispatch }) {
   const sortNameAsc = () => {
     let arrCopy = [...filteredList];
     arrCopy.sort();
-    listDispatch({ type: "SORT", payload: arrCopy });
+    listDispatch({ type: "SORT", payload: arrCopy }); 
   };
 
   // sorting name descending (Z-A)
