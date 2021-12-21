@@ -19,20 +19,20 @@ a.show-more:hover {
   color: #4f75c2;
 }
 
-.result-item {
+.results-list .list-item {
   margin-top: 20px;  
   padding-top: 2px; 
  }
 
- .result-item:hover .name-surname{
+ .results-list .list-item:hover .name-surname{
   color:white
  }
 
- .result-item:first-child{
+ .results-list .list-item:first-child{
   margin-top: 0px;  
   padding-top: 2px; 
  }
  
- .result-item:hover{
+ .results-list .list-item:hover{
   background: #C4C4C4;
 }

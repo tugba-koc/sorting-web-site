@@ -3,7 +3,7 @@ import ResultItem from "../ResultItem/ResultItem";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
-function LandingList({ filteredList }) { 
+function LandingList({ filteredList }) {
   let navigate = useNavigate();
   const handleClick = () => {
     navigate("/result");
@@ -12,9 +12,7 @@ function LandingList({ filteredList }) {
   return (
     <div className="landing-list">
       {filteredList.slice(0, 3).map((el, index) => (
-        <div className="list-item" key={index}>
-          <ResultItem el={el} />
-        </div>
+        <ResultItem el={el} key={index} />
       ))}
       {filteredList.length >= 3 ? (
         <button onClick={handleClick} className="show-more mx-auto">

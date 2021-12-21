@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function ResultItem({ el }) {
+function ResultItem({ el, key }) {
   return (
+    <div class="list-item">
     <div className="item-border">
       <div className="list-left">
         <div className="country-name">{el[4]}</div>
@@ -11,6 +12,7 @@ function ResultItem({ el }) {
       <div className="list-right">
         <div className="e-mail">{el[2]}</div>
       </div>
+    </div>
     </div>
   );
 }
