@@ -11,7 +11,6 @@ import ErrorText from "../../components/ErrorText/ErrorText";
 function Result({
   showResults,
   changeHandler,
-  list,
   filteredList,
   text,
   isActive,

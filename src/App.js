@@ -25,48 +25,46 @@ function App() {
 
   return (
     <div>
-        <Router>
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <Landing
-                  isActive={list.isActive}
-                  list={list.list}
-                  filteredList={list.filteredList}
-                  text={list.text}
-                  changeHandler={(event) =>
-                    listDispatch({
-                      type: "ON_CHANGE",
-                      payload: event.target.value,
-                    })
-                  }
-                  showResults={showResults}
-                />
-              }
-            />
-            <Route
-              path="/result"
-              element={
-                <Results
-                  isActive={list.isActive}
-                  list={list.list}
-                  filteredList={list.filteredList}
-                  text={list.text}
-                  listDispatch={listDispatch}
-                  changeHandler={(event) =>
-                    listDispatch({
-                      type: "ON_CHANGE",
-                      payload: event.target.value,
-                    })
-                  }
-                  showResults={showResults}
-                />
-              }
-            />
-          </Routes>
-        </Router>
+      <Router>
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <Landing
+                isActive={list.isActive}
+                filteredList={list.filteredList}
+                text={list.text}
+                changeHandler={(event) =>
+                  listDispatch({
+                    type: "ON_CHANGE",
+                    payload: event.target.value,
+                  })
+                }
+                showResults={showResults}
+              />
+            }
+          />
+          <Route
+            path="/result"
+            element={
+              <Results
+                isActive={list.isActive}
+                filteredList={list.filteredList}
+                text={list.text}
+                listDispatch={listDispatch}
+                changeHandler={(event) =>
+                  listDispatch({
+                    type: "ON_CHANGE",
+                    payload: event.target.value,
+                  })
+                }
+                showResults={showResults}
+              />
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -9,7 +9,6 @@ import ErrorText from "../../components/ErrorText/ErrorText";
 function Landing({
   showResults,
   changeHandler,
-  list,
   filteredList,
   text,
   isActive,
