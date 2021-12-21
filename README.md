@@ -1,4 +1,4 @@
-## for [Live Demo] (http://localhost:3000)
+for [Live Demo] (http://localhost:3000)
 
 ### This app aims to sort of data coming from data.json.
 
