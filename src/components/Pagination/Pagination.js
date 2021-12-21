@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 function Pagination({
-  paginate,
+  paginate, 
   pageNumbers,
   paginatePrev,
   paginateNext,
