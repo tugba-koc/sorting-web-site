@@ -1,4 +1,4 @@
-### for [Live Demo](https://github.com/facebook/create-react-app)
+### for [Live Demo](https://sorting-web-site.netlify.app/)
 
 This app aims to sort of data coming from Utils/data.json. It is a simple app that uses React. It sorts the data by the name of the people and the date. 
 
