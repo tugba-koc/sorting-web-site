@@ -1,0 +1,11 @@
+.btn-block {
+  padding: 0 42px;
+  height: 46px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #204080;
+}
+
+.btn-block:hover {
+  background: #4F75C2;
+}

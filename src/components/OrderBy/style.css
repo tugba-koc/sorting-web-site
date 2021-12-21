@@ -1,0 +1,29 @@
+.order-by-icon {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.icon {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 3px;
+}
+
+p.dropdown-item:active {
+  background-color: #e5e5e5;
+}
+
+p.dropdown-item {
+  cursor: pointer;
+}
+
+.order-by-p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  padding-bottom: 0;
+  color: #484848;
+}

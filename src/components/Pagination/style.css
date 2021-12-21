@@ -1,0 +1,36 @@
+li.page-item a.page-link,
+a.page-link-dotted {
+  padding: 4px 8px;
+  margin: 10px 10px 10px 0;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #484848;
+  text-decoration: none;
+  border: 1px solid #484848;
+}
+
+a.page-link-dotted {
+  border: none
+}
+
+
+
+li.page-item a.page-link:focus {
+  background-color: #204080;
+  color: white;
+}
+
+li.page-item a.active {
+  background-color: #204080;
+  color: white;
+}
+
+li {
+  list-style: none;
+}

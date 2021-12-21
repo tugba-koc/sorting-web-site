@@ -1,0 +1,53 @@
+.item-border {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid black; 
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.list-item {
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+ }
+ 
+
+.border:first-child {
+  margin-top: 0;
+}
+
+.country-name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #484848;
+}
+
+.name-surname {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #686868;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.e-mail {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #484848;
+}
+
+
+.list-right{
+  margin-left: auto;
+}
