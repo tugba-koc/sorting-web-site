@@ -4,7 +4,7 @@ import "./style.css";
 function Button({ showResults }) {
   return (
     <div>
-      <button onClick={showResults} className="button btn-block"> 
+      <button onClick={showResults} className="button btn-block">
         Search
       </button>
     </div>

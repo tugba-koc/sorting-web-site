@@ -1,5 +1,4 @@
 import React from "react";
-// import { useResult } from "../../context/ResultContext";
 import ResultItem from "../ResultItem/ResultItem";
 import "./style.css";
 

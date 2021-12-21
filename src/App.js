@@ -1,5 +1,4 @@
 import "./App.css";
-import { ResultProvider } from "./context/ResultContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
 import Results from "./pages/Results/Results";
@@ -26,7 +25,6 @@ function App() {
 
   return (
     <div>
-      <ResultProvider>
         <Router>
           <Routes>
             <Route
@@ -69,7 +67,6 @@ function App() {
             />
           </Routes>
         </Router>
-      </ResultProvider>
     </div>
   );
 }
