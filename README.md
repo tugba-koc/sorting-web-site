@@ -1,6 +1,8 @@
 ### for [Live Demo](https://github.com/facebook/create-react-app)
 
-### This app aims to sort of data coming from data.json.
+This app aims to sort of data coming from Utils/data.json. It is a simple app that uses React. It sorts the data by the name of the people and the date. 
+
+It consists of two main pages: Landing and Results pages. The Landing page is the main page that displays part of the sorted data. The Results page is the one that allows the user to see all sorted data list.
 
 ### Getting Started with Create React App
 
