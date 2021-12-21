@@ -8,7 +8,7 @@ import OrderBy from "../../components/OrderBy/OrderBy";
 import Pagination from "../../components/Pagination/Pagination";
 import ErrorText from "../../components/ErrorText/ErrorText";
 
-function Result({
+function Result({ 
   showResults,
   changeHandler,
   filteredList,
