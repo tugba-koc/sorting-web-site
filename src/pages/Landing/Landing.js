@@ -5,42 +5,30 @@ import "./style.css";
 import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo";
 import ErrorText from "../../components/ErrorText/ErrorText";
+import { useResult } from "../../utils/context";
 
-function Landing({
-  showResults,
-  changeHandler,
-  filteredList,
-  text,
-  isActive,
-}) {
+function Landing() {
+  const { filteredList, isActive } = useResult();
   return (
     <div className="landing d-flex justify-content-center flex-column align-items-center vh-100">
-      <div className="col-2 mr"> 
+      <div className="col-2 mr">
         <Logo />
       </div>
       <p className="ms-5 mb-5 mt-1 short-p">Search web application</p>
 
-      <div className="input-group d-flex justify-content-center"> 
+      <div className="input-group d-flex justify-content-center">
         <div className="col-6 me-3 ">
-          <SearchBar
-            text={text}
-            changeHandler={changeHandler}
-            isActive={isActive}
-            filteredList={filteredList}
-          />
+          <SearchBar />
         </div>
-
-        <Button showResults={showResults} />
+        <Button />
       </div>
       <div className="col-6 mr">
         {isActive && filteredList.length ? (
-          <LandingList
-            filteredList={filteredList}
-          />
+          <LandingList />
         ) : !isActive ? (
           false
         ) : isActive && !filteredList.length ? (
-          <ErrorText text={text} />
+          <ErrorText  />
         ) : null}
       </div>
     </div>

@@ -2,8 +2,10 @@ import React from "react";
 import ResultItem from "../ResultItem/ResultItem";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import { useResult } from "../../utils/context";
 
-function LandingList({ filteredList }) {
+function LandingList() {
+  const { filteredList } = useResult();
   let navigate = useNavigate();
   const handleClick = () => {
     navigate("/result");

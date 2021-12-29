@@ -1,3 +1,5 @@
+import * as ACTION_TYPES from "../actions/action_type";
+
 export const listInitialState = {
   list: [],
   isLoading: false,
@@ -7,15 +9,15 @@ export const listInitialState = {
   text: "",
 };
 
-export const listReducer = (state, action) => {
+export const listReducer = (state = listInitialState, action) => {
   switch (action.type) {
-    case "FETCH_PROJECTS":
+    case ACTION_TYPES.FETCH_PROJECTS:
       return {
         ...state,
         list: action.payload,
         isLoading: true,
       };
-    case "SHOW_RESULTS":
+    case ACTION_TYPES.SHOW_RESULTS:
       return {
         ...state,
         filteredList: state.list.filter((item) =>
@@ -26,7 +28,7 @@ export const listReducer = (state, action) => {
         ),
         isActive: true,
       };
-    case "ON_CHANGE": {
+    case ACTION_TYPES.ON_CHANGE: {
       const nextText = action.payload;
       return {
         ...state,
@@ -34,14 +36,14 @@ export const listReducer = (state, action) => {
         isActive: false,
       };
     }
-    case "SORT": {
+    case ACTION_TYPES.SORT: {
       const arrCopy = action.payload;
       return {
         ...state,
         filteredList: arrCopy,
       };
     }
-    case "BLANK_RESULTS":
+    case ACTION_TYPES.BLANK_RESULTS:
       return {
         ...state,
         filteredList: [],

@@ -7,15 +7,10 @@ import "./style.css";
 import OrderBy from "../../components/OrderBy/OrderBy";
 import Pagination from "../../components/Pagination/Pagination";
 import ErrorText from "../../components/ErrorText/ErrorText";
+import { useResult } from "../../utils/context";
 
-function Result({ 
-  showResults,
-  changeHandler,
-  filteredList,
-  text,
-  isActive,
-  listDispatch,
-}) {
+function Result() {
+  const { filteredList, isActive } = useResult();
   // pagination starts
   const [currentPage, setCurrentPage] = useState(1);
   const resultsPerPage = 6;
@@ -31,7 +26,7 @@ function Result({
 
   React.useEffect(() => {
     isActive ? setCurrentPage(1) : setCurrentPage(currentPage);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActive]);
 
   for (let i = 1; i <= Math.ceil(filteredList.length / resultsPerPage); ++i) {
@@ -66,16 +61,11 @@ function Result({
         </div>
         <div className="d-flex flex-row ms-2 ms-md-5 col-7">
           <div className="w-100">
-            <SearchBar
-              text={text}
-              changeHandler={changeHandler} 
-              isActive={isActive}
-              filteredList={filteredList}
-            />
+            <SearchBar />
           </div>
 
           <div className="ms-3">
-            <Button showResults={showResults} />
+            <Button />
           </div>
         </div>
       </div>
@@ -85,10 +75,7 @@ function Result({
         <div className="ms-2 ms-md-5 col-7">
           {isActive && filteredList.length >= 2 ? (
             <div className="d-flex justify-content-end">
-              <OrderBy
-                filteredList={filteredList}
-                listDispatch={listDispatch}
-              />
+              <OrderBy  />
             </div>
           ) : null}
           <div>
@@ -97,7 +84,7 @@ function Result({
             ) : !isActive ? (
               false
             ) : isActive && !filteredList.length ? (
-              <ErrorText text={text} />
+              <ErrorText />
             ) : null}
           </div>
           <div className="d-flex justify-content-center mt-5 mb-5">

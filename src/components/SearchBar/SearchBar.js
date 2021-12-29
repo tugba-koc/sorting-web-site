@@ -1,7 +1,9 @@
 import React from "react";
 import "./style.css";
+import { useResult } from "../../utils/context";
 
-function SearchBar({ text, changeHandler, isActive, filteredList }) { 
+function SearchBar() {
+  const { text, changeHandler, isActive, filteredList } = useResult();
   return (
     <div>
       <input

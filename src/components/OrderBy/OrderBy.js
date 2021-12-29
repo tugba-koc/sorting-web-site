@@ -1,22 +1,25 @@
 import React from "react";
 import "./style.css";
 import { BiSort } from "react-icons/bi";
+import { useResult } from "../../utils/context";
+import * as ACTION_TYPES from "../../store/actions/action_type";
 
-function OrderBy({ filteredList, listDispatch }) {
+function OrderBy() {
+  const { filteredList, listDispatch } = useResult();
   // sorting functions
 
   // sorting name ascending (A-Z)
   const sortNameAsc = () => {
     let arrCopy = [...filteredList];
     arrCopy.sort();
-    listDispatch({ type: "SORT", payload: arrCopy }); 
+    listDispatch({ type: ACTION_TYPES.SORT, payload: arrCopy });
   };
 
   // sorting name descending (Z-A)
   const sortNameDes = () => {
     let arrCopy = [...filteredList];
     arrCopy.sort().reverse();
-    listDispatch({ type: "SORT", payload: arrCopy });
+    listDispatch({ type: ACTION_TYPES.SORT, payload: arrCopy });
   };
 
   // sorting date ascending (oldest first)
@@ -29,7 +32,7 @@ function OrderBy({ filteredList, listDispatch }) {
 
     arrCopy.forEach((it) => (it[3] = it[3].split("/").reverse().join("/")));
 
-    listDispatch({ type: "SORT", payload: arrCopy });
+    listDispatch({ type: ACTION_TYPES.SORT, payload: arrCopy });
   };
 
   // sorting date descending (newest first)
@@ -41,7 +44,7 @@ function OrderBy({ filteredList, listDispatch }) {
 
     arrCopy.forEach((it) => (it[3] = it[3].split("/").reverse().join("/")));
 
-    listDispatch({ type: "SORT", payload: arrCopy });
+    listDispatch({ type: ACTION_TYPES.SORT, payload: arrCopy });
   };
 
   return (
