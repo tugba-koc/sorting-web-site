@@ -6,7 +6,7 @@ function Button() {
   const { showResults } = useResult();
   return (
     <div>
-      <button onClick={showResults} className="button btn-block">
+      <button onClick={showResults} className="button btn-block px-md-4 px-3">
         Search
       </button>
     </div>

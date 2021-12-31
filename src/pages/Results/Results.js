@@ -56,7 +56,7 @@ function Result() {
   return (
     <div>
       <div className="results-wrapper d-flex align-items-center">
-        <div className="d-flex justify-content-center ms-2 ms-md-5 col-2 col-lg-1">
+        <div className="d-flex justify-content-center ms-2 ms-md-5 col-3 col-md-2 col-lg-1">
           <Logo />
         </div>
         <div className="d-flex flex-row ms-2 ms-md-5 col-7">
@@ -71,11 +71,11 @@ function Result() {
       </div>
 
       <div className="d-flex d-inline">
-        <div className="ms-2 ms-md-5 col-2 col-lg-1"></div>
+        <div className="ms-2 ms-md-5 col-3 col-md-2 col-lg-1"></div>
         <div className="ms-2 ms-md-5 col-7">
           {isActive && filteredList.length >= 2 ? (
             <div className="d-flex justify-content-end">
-              <OrderBy  />
+              <OrderBy />
             </div>
           ) : null}
           <div>

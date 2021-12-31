@@ -12,7 +12,7 @@ function Pagination({
     <nav >
       <ul className="d-flex align-items-center">
         <li className="page-item">
-          <a onClick={() => paginatePrev()} href="##" className="page-link">
+          <a onClick={() => paginatePrev()} href="##" className="page-link other shadow-none">
             Previous
           </a>
         </li>
@@ -22,7 +22,7 @@ function Pagination({
                 <a
                   onClick={() => paginate(num)}
                   href="##"
-                  className={`page-link ${
+                  className={`page-link shadow-none ${
                     Number(currentPage) === Number(num) ? "active" : null
                   }`}
                 >
@@ -38,7 +38,7 @@ function Pagination({
                 <a
                   onClick={() => paginate(num)}
                   href="##"
-                  className={`page-link ${
+                  className={`page-link shadow-none ${
                     Number(currentPage) === Number(num) ? "active" : null
                   }`}
                 >
@@ -52,7 +52,7 @@ function Pagination({
         Number(currentPage) <= pageNumbers.length &&
         Number(currentPage) > 3 ? (
           <li className="page-item">
-            <a href="##" className="page-link-dotted">
+            <a href="##" className="page-link-dotted ">
               . . .
             </a>
           </li>
@@ -65,7 +65,7 @@ function Pagination({
                   <a
                     onClick={() => paginate(num)}
                     href="##"
-                    className={`page-link ${
+                    className={`page-link shadow-none ${
                       Number(currentPage) === Number(num) ? "active" : null
                     }`}
                   >
@@ -87,7 +87,7 @@ function Pagination({
                 <a
                   onClick={() => paginate(num)}
                   href="##"
-                  className={`page-link ${
+                  className={`page-link shadow-none ${
                     Number(currentPage) === Number(num) ? "active" : null
                   }`}
                 >
@@ -98,7 +98,7 @@ function Pagination({
           : null}
 
         <li className="page-item">
-          <a href="##" onClick={() => paginateNext()} className="page-link">
+          <a href="##" onClick={() => paginateNext()} className="page-link other shadow-none">
             Next
           </a>
         </li>

@@ -1,10 +1,10 @@
-.mr {
-  margin-right: 152px;
-}
-
 p.short-p {
   font-weight: 600;
+  font-size: 1vw;
 }
 
-
-
+@media screen and (max-width: 1200px) {
+  p.short-p {
+    visibility: hidden;
+  }
+}

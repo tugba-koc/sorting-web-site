@@ -9,7 +9,7 @@ function ResultItem({ el, key }) {
         <div className="country-name">{el[4]}</div>
         <div className="name-surname">{el[0]}</div>
       </div>
-      <div className="list-right">
+      <div className="list-right d-none d-md-block">
         <div className="e-mail">{el[2]}</div>
       </div>
     </div>

@@ -5,14 +5,22 @@ import { useNavigate } from "react-router-dom";
 import { useResult } from "../../utils/context";
 
 function LandingList() {
-  const { filteredList } = useResult();
+  const { filteredList, isLoading } = useResult();
   let navigate = useNavigate();
   const handleClick = () => {
     navigate("/result");
   };
 
+  if (!isLoading) {
+    return (
+      <div class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    );
+  }
+
   return (
-    <div className="landing-list">
+    <div className="landing-list ">
       {filteredList.slice(0, 3).map((el, index) => (
         <ResultItem el={el} key={index} />
       ))}

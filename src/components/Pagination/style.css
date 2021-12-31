@@ -26,6 +26,11 @@ li.page-item a.page-link:focus {
   color: white;
 }
 
+li.page-item a.page-link.other:focus {
+  background: #ffffff;
+  color: #484848;
+}
+
 li.page-item a.active {
   background-color: #204080;
   color: white;
