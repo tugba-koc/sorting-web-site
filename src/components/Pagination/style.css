@@ -16,10 +16,8 @@ a.page-link-dotted {
 }
 
 a.page-link-dotted {
-  border: none
+  border: none;
 }
-
-
 
 li.page-item a.page-link:focus {
   background-color: #204080;
